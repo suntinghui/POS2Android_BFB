@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 不知道为什么，在moto的milestone上，下拉选择后的字体颜色为白色，无法识别，所以自己配置文件，显示的设置为黑色 -->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:gravity="left"
+    android:singleLine="true"
+    android:textColor="#000000"
+    android:textSize="14sp" />

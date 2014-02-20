@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dip" >
+
+    <LinearLayout
+        android:id="@+id/startLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/input_bg"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="开始日期"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/startdate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dip"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+<!--20121206 xxm add android:visibility="gone" 注释掉这个控件  -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dip"
+        android:text="开始日期默认为本月第一天"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:visibility="gone" />
+  <!-- end -->  
+    <LinearLayout
+        android:id="@+id/endLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/input_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dip"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="结束日期"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/enddate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+             />
+    </LinearLayout>
+<!--20121206 xxm add android:visibility="gone" 注释掉这个控件  -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip"
+        android:text="结束日期默认为当天"
+        android:textColor="@color/gray"
+        android:textSize="14sp" 
+        android:visibility="gone"/>
+<!-- end -->
+</LinearLayout>

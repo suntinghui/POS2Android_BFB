@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 签购单上传 -->
+<root shouldMac = "true" isJson = "true">
+	<field key="fieldTrancode" value="089005" />
+	
+	<field key="local_log" value="__local_log"  />
+	<field key="merchant_id" value="__merchant_id" />
+	<field key="img" value="__img"/>
+	<field key="macstr" value="tel,local_log,merchant_id"/>
+	
+</root>

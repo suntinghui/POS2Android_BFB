@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/back_button" >
+            </Button>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="添加收款人"
+                android:textColor="@color/white"
+                android:textSize="18dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bgLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.bfb.pos.activity.view.TopInfoView
+                android:id="@+id/topInfoView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/inputLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="40dip"
+                android:orientation="vertical" >
+
+                <!-- begin  20121206 xxm update layout_marginTop -->
+
+                <com.bfb.pos.activity.view.TextWithLabelView
+                    android:id="@+id/accountNoText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip"
+                    android:paddingTop="8dip" />
+                <!-- end -->
+
+                <com.bfb.pos.activity.view.TextWithLabelView
+                    android:id="@+id/accountNoAgainText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip"
+                    android:paddingTop="8dip" />
+
+                <com.bfb.pos.activity.view.TextWithLabelView
+                    android:id="@+id/nameText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip"
+                    android:paddingTop="8dip" />
+
+                <com.bfb.pos.activity.view.TextWithLabelView
+                    android:id="@+id/phoneNoText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip"
+                    android:paddingTop="8dip" />
+
+                <!-- begin 20121206 xxm update layout_marginTop  add paddingTop paddingBottom属性 -->
+
+                <Spinner
+                    android:id="@+id/bankSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:background="@drawable/selectbg"
+                    android:drawSelectorOnTop="true"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="10dip"
+                    android:paddingTop="10dip"
+                    android:prompt="@string/selectBank" />
+                <!-- end -->
+
+            </LinearLayout>
+
+            <!-- begin 20121206 xxm update  margin 属性 -->
+
+            <Button
+                android:id="@+id/okButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/button_bg"
+                android:text="添     加"
+                android:textColor="@color/black"
+                android:textSize="18dip" />
+            <!-- end -->
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

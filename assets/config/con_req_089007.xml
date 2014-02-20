@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 获取提款银行账号 -->
+<root shouldMac = "true" isJson = "true">
+	<field key="fieldTrancode" value="089007" />
+	
+	<field key="tel" value="__tel"  />
+	<field key="macstr" value="tel"/>
+</root>

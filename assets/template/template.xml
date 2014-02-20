@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template>
+
+	<label templateId="label01" color="WHITE" size="14" default="default"></label>
+	<label templateId="label02" color="BLACK" size="14" gravity="CENTER"></label>
+	<label templateId="label03" color="WHITE" size="14" ></label>
+	<label templateId="label04" color="WHITE" size="16" ></label>
+	<label templateId="label05" color="WHITE" size="18" ></label>
+	<label templateId="label06" color="WHITE" size="14" bold="true"></label>
+	<label templateId="label07" color="RED" size="20" bold="true"></label>
+	<label templateId="label08" color="BLACK" size="18" bold="true"></label>
+	<label templateId="label09" color="BLACK" size="18"></label>
+	<label templateId="label10" color="BLUE" size="18" gravity="RIGHT"></label>
+	<label templateId="label11" color="BLACK" size="18" gravity="LEFT"></label>
+	<label templateId="label12" color="RED" size="18" gravity="LEFT"></label>
+	<label templateId="label13" color="RED" size="13" gravity="LEFT"></label>
+	<label templateId="label14" color="GRAY" size="13" gravity="RIGHT"></label>
+	<label templateId="label15" color="BLACK" size="14" gravity="LEFT"></label>
+	<label templateId="label16" color="GRAY" size="13" gravity="LEFT"></label>
+	<label templateId="label17" color="BALCK" size="16" gravity="LEFT"></label>
+	<label templateId="label18" color="BALCK" size="18" gravity="CENTER"></label>
+	<label templateId="label19" color="BALCK" size="13" gravity="LEFT"></label>
+	<label templateId="label20" color="ORANGE" size="13" gravity="RIGHT"></label>
+	<label templateId="label21" color="BALCK" size="16" gravity="RIGHT"></label>
+	
+	<button templateId="button01" color="BLACK" size="14" gravity="CENTER" default="default"></button>
+	<button templateId="button02" color="WHITE" size="14" gravity="CENTER" bgImg="button_press"></button>
+	<button templateId="button03" color="WHITE" size="12" gravity="CENTER" bgImg="return_blue" bgImg_down="return_dblue"></button>
+	<button templateId="button04" color="WHITE" size="10" gravity="CENTER" bgImg="confirm_button" ></button>
+	<button templateId="button05" color="WHITE" size="10" gravity="CENTER" bgImg="back_button" ></button>
+	<button templateId="button06" color="BLACK" size="17" gravity="CENTER" bgImg="button_bg"></button>
+	<button templateId="button07" color="WHITE" size="14" gravity="CENTER" bgImg="sign_button"></button>
+    <button templateId="button08" color="WHITE" size="14" gravity="BOTTOM" bgImg="confirm_button_nomal"></button>
+    
+	<text templateId="text01" color="BLACK" size="14"  default="default"></text>
+	<text templateId="text02" color="WHITE" size="14" ></text>
+	<text templateId="text03" color="BLACK" size="14" bgImg="balance_item_bg" ></text>
+	<text templateId="text04" color="BLACK" size="14" bgImg="input_bg1" ></text>
+	
+	<image templateId="image01" adjustViewBounds="true" default="default"></image>
+	
+	<struct templateId="functionPageTemplate" type="fuctionPage" default="default"></struct>
+	
+	<linearLayout templateId="linearLayout01" orientation="VERTICAL" width="-1" height="-2" default="default"></linearLayout>
+	<linearLayout templateId="linearLayout02" orientation="HORIZONTAL" width="-1" height="-2" gravity="CENTER"></linearLayout>
+	<linearLayout templateId="linearLayout03" orientation="VERTICAL" width="-1" height="-2" gravity="CENTER"></linearLayout>
+	<linearLayout templateId="linearLayout04" orientation="HORIZONTAL" width="-2" height="-2" gravity="CENTER"></linearLayout>
+	<linearLayout templateId="linearLayout05" orientation="VERTICAL" width="-1" height="-2" bgImg="cntback"></linearLayout>
+	<linearLayout templateId="linearLayout06" orientation="VERTICAL" width="-1" height="-1" ></linearLayout>
+	<linearLayout templateId="linearLayout07" orientation="VERTICAL" width="-1" height="-1" ></linearLayout>
+	<!-- ListView and GridView cannot use attribute width and height.otherwise,will caught ClassCaseException  -->
+	<linearLayout templateId="linearLayout08" orientation="HORIZONTAL" width="-1" height="-1" bgImg="cntback"></linearLayout>
+	<linearLayout templateId="linearLayout09" orientation="HORIZONTAL" width="-1" height="-1" ></linearLayout>
+	<linearLayout templateId="linearLayout10" orientation="VERTICAL"  gravity="CENTER"></linearLayout>
+    <linearLayout templateId="linearLayout11" orientation="VERTICAL" width="-1" height="-2" gravity="BOTTOM"></linearLayout>
+	<linearLayout templateId="linearLayout12" orientation="HORIZONTAL" width="-1" height="-2" ></linearLayout>
+	<linearLayout templateId="linearLayout14" orientation="HORIZONTAL" width="-1" height="-2" ></linearLayout>
+	<linearLayout templateId="linearLayout17" orientation="VERTICAL" width="-1" height="-2"></linearLayout>
+	<linearLayout templateId="linearLayout18" orientation="HORIZONTAL" width="-1" height="-2" gravity="RIGHT"></linearLayout>
+	<linearLayout templateId="linearLayout19" orientation="VERTICAL" width="-1" height="-2" gravity="CENTER" bgImg="prompt_cnt"></linearLayout>
+	
+	<relativeLayout templateId="relativeLayout01"  width="-1" height="-2" ></relativeLayout>
+	<relativeLayout templateId="relativeLayout02"  width="-1" height="-1" ></relativeLayout>
+	<!-- ListView and GridView cannot use attribute width and height.otherwise,will caught ClassCaseException  -->
+	<relativeLayout templateId="relativeLayout03"></relativeLayout>
+	<relativeLayout templateId="relativeLayout04"  width="-1" height="-2" bgImg="topbg"></relativeLayout>
+	<relativeLayout templateId="relativeLayout05"  width="-1" height="-2" bgImg="cntback"></relativeLayout>
+	<relativeLayout templateId="relativeLayout06"  width="-1" height="-1" ></relativeLayout>
+	
+	<linearLayoutParams templateId="linearLayoutParams01" width="-1" height="-2"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams02" width="-2" height="-2" weight="1"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams03" width="-1" height="-2" weight="2"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams04" width="-1" height="-1" weight="1"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams05" width="-1" height="-2" weight="3"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams06" width="-1" height="-2" weight="4"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams07" width="-1" height="-2" weight="5"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams08" width="-1" height="-2" weight="7"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams09" width="-1" height="-2" weight="8"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams10" width="-1" height="-1" weight="1"></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams11" width="-2" height="-2" ></linearLayoutParams>
+	<linearLayoutParams templateId="linearLayoutParams12" width="-1" height="-2" weight="1"></linearLayoutParams>
+	
+	<relativeLayoutParams templateId="relativeLayoutParams01" rule="ALIGN_PARENT_LEFT" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams02" rule="ALIGN_PARENT_RIGHT" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams03" rule="ALIGN_PARENT_BOTTOM" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams031" rule="ALIGN_PARENT_BOTTOM" width="-1" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams04" rule="ALIGN_PARENT_TOP" ></relativeLayoutParams>
+	
+	<relativeLayoutParams templateId="relativeLayoutParams05" rule="CENTER_HORIZONTAL" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams06" rule="CENTER_IN_PARENT" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams07" rule="CENTER_VERTICAL" ></relativeLayoutParams>
+	
+	<relativeLayoutParams templateId="relativeLayoutParams08" rule="ALIGN_BOTTOM" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams09" rule="ALIGN_LEFT" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams10" rule="ALIGN_TOP" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams11" rule="ALIGN_RIGHT" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams12" rule="ALIGN_BASELINE" ></relativeLayoutParams>
+	
+	<relativeLayoutParams templateId="relativeLayoutParams13" rule="BELOW" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams14" rule="ABOVE" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams15" rule="LEFT_OF" ></relativeLayoutParams>
+	<relativeLayoutParams templateId="relativeLayoutParams16" rule="RIGHT_OF" ></relativeLayoutParams>
+	
+	<gridView templateId="gridView01" numColumns="AUTO_FIT" columnWidth="90" bgImg="back" verticalSpacing="10" horizontalSpacing="10"></gridView>
+	
+	<listView templateId="listView01" ></listView>
+
+</template>
+

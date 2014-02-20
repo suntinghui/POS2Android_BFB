@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 找回密码 支付密码 getPassword-->
+<root isJson = "true">
+	<field key="fieldTrancode" value="089017" />
+	
+	<field key="tel" value="__tel"  />
+	<field key="smscode" value="__smscode" />
+	<field key="paypass" value="__paypass" />
+	<field key="type" value="__type" />
+	<field key="macstr" value="tel,smscode"  />
+</root>

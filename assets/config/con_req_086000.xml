@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 签到 -->
+<root isJson = "false">
+    
+	<field key="fieldTrancode" value="086000" />
+	
+	<field key="fieldTransType" value="0860"  />
+	<field key="field11" value="__TRACEAUDITNUM" />
+	<field key="field60" value="00#__BATCHNUM#001"/>
+	<field key="field63" value="__username#__PSAMNO"/>
+</root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 支行 -->
+<root shouldMac = "true" isJson = "true">
+	<field key="fieldTrancode" value="089012" />
+	
+	<field key="tel" value="__tel"  />
+	<field key="provinceid" value="__provinceid"  />
+	<field key="cityid" value="__cityid"  />
+	<field key="bankbranchname" value="__bankbranchname"  />
+	<field key="bankid" value="__bankid"  />
+	<field key="page_current" value="__page_current"  />
+	<field key="page_size" value="__page_size"  />
+	<field key="macstr" value="tel,provinceid,cityid,bankid"/>
+</root>
+
+

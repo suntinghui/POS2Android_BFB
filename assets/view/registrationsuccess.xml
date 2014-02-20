@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <body
+        isForbidBack="true"
+        pageBack="close"
+        pageId="registrationsuccess"
+        pageName="注册成功"
+        templateId="NULL" >
+
+        <layout
+            id="topBar"
+            templateId="relativeLayout04" >
+
+            <label
+                id="topLabel"
+                layoutParamsTemplateIds="relativeLayoutParams06,relativeLayoutParams07"
+                templateId="label05"
+                value="注册成功" >
+            </label>
+        </layout>
+
+        <topInfoView
+            id="topInfoView"
+            layoutParamsTemplateIds="linearLayoutParams01"
+            templateId="linearLayout01" />
+
+        <layout
+            id="innerLayout"
+            layoutParamsTemplateIds="linearLayoutParams04"
+            templateId="linearLayout06" >
+
+            <image
+                id="settlement_instruction_Image"
+                layoutParamsTemplateIds="linearLayoutParams01"
+                margin="0,30,0,0"
+                src="transaction_success"
+                templateId="image01" />
+
+            <label
+                id="signsuccessLabel"
+                layoutParamsTemplateIds="linearLayoutParams01"
+                margin="0,20,0,0"
+                templateId="label18"
+                value="商户注册成功" />
+
+            <layout
+                id="middleLayout"
+                layoutParamsTemplateIds="linearLayoutParams01"
+                margin="20,10,20,0"
+                templateId="linearLayout17" >
+
+                <layout
+                    id="innerLayout_0"
+                    layoutParamsTemplateIds="linearLayoutParams01"
+                    margin="35,30,0,0"
+                    templateId="linearLayout14" >
+
+                    <label
+                        id="businessnumberLabel"
+                        layoutParamsTemplateIds="linearLayoutParams11"
+                        templateId="label17"
+                        value="商户编号：" />
+
+                    <label
+                        id="field42"
+                        layoutParamsTemplateIds="linearLayoutParams12"
+                        templateId="label17"
+                        value="001" />
+                </layout>
+
+                <layout
+                    id="innerLayout_1"
+                    layoutParamsTemplateIds="linearLayoutParams01"
+                    margin="35,5,0,0"
+                    templateId="linearLayout14" >
+
+                    <label
+                        id="bussinessnameLabel"
+                        layoutParamsTemplateIds="linearLayoutParams11"
+                        templateId="label17"
+                        value="商户名称：" />
+
+                    <label
+                        id="merchName"
+                        layoutParamsTemplateIds="linearLayoutParams12"
+                        templateId="label17"
+                        value="__MERCHERNAME" />
+                </layout>
+
+                <layout
+                    id="innerLayout_2"
+                    layoutParamsTemplateIds="linearLayoutParams01"
+                    margin="35,5,0,0"
+                    templateId="linearLayout14" >
+
+                    <label
+                        id="terminalLabel"
+                        layoutParamsTemplateIds="linearLayoutParams11"
+                        templateId="label17"
+                        value="终端编号：" />
+
+                    <label
+                        id="field41"
+                        layoutParamsTemplateIds="linearLayoutParams12"
+                        templateId="label17"
+                        value="001" />
+                </layout>
+            </layout>
+        </layout>
+
+        <input
+            id="settlementConfirmBtn"                  
+            actionId="settlementConfirmBtn"
+            actionType="finish"
+            layoutParamsTemplateIds="linearLayoutParams01"
+            margin="20,20,20,20"
+            templateId="button06"
+            type="button"
+            value="确     定" >
+        </input>
+    </body>
+
+</root>

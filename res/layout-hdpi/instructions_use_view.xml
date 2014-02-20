@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/prompt_cnt"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dip"
+        android:paddingBottom="5dip"
+        android:paddingLeft="7dip"
+        android:paddingRight="7dip"
+        android:paddingTop="5dip"
+        android:singleLine="false"
+        android:textColor="@color/instructions"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/list_item_bg" 
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:paddingRight="15dip">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卡号"
+                style="@style/black_15"/>
+            
+            <TextView android:id="@+id/tv_account1" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="account1"
+                android:layout_alignParentRight="true"
+                style="@style/black_15"/>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="5dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易金额"
+                style="@style/black_15"/>
+            
+            <TextView android:id="@+id/tv_amount" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="amount"
+                android:layout_alignParentRight="true"
+                style="@style/gree_17"/>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="5dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易流水号"
+                style="@style/black_15"/>
+            
+            <TextView android:id="@+id/tv_local_log" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="local_log"
+                android:layout_alignParentRight="true"
+                style="@style/black_15"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/moreLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dip"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/moreButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/more_button"
+            android:text="点击查看更多" />
+    </RelativeLayout>
+
+</LinearLayout>

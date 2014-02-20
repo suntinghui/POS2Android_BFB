@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 手机签退请求报文 -->
+
+<root>
+
+	<field key="fieldTrancode" value="082001"  />
+	
+	<field key="fieldTransType" value="0820"  />
+	<field key="field11" value="__TRACEAUDITNUM"  />
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="field60" value="01#__BATCHNUM#00300" />
+	<field key="fieldMerchPWD" value="__fieldMerchPWD" />
+	
+</root>

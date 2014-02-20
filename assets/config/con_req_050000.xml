@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 批结算请求报文-->
+
+<root>
+	<field key="fieldTrancode" value="050000"  />
+	<field key="field11" value="__TRACEAUDITNUM"  />
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="field48" value="000000000012#003#000000000012#003#0#0000000000000000000000000000000"  />
+	<field key="field49" value="156" />
+	<field key="field60" value="00#__BATCHNUM#201" />
+	<field key="field63" value="001"  />
+	
+</root>

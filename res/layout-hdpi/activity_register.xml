@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dhc="http://schemas.android.com/apk/res/com.bfb.pos"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/back_button" >
+            </Button>
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="注册"
+                android:textColor="@color/white"
+                android:textSize="18dip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!-- end -->
+
+            <com.bfb.pos.activity.view.TextWithIconView
+                android:id="@+id/et_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:paddingTop="8dip" />
+
+            
+            <com.bfb.pos.activity.view.PasswordWithIconView
+                android:id="@+id/et_pwd_new"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:paddingTop="8dip" />
+
+            <com.bfb.pos.activity.view.PasswordWithIconView
+                android:id="@+id/et_pwd_confirm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:paddingTop="8dip" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dip" >
+
+                <Button
+                    android:id="@+id/btn_sms"
+                    style="@style/black_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/img_btn"
+                    android:text="获取短信校验码" />
+
+                <EditText
+                    android:id="@+id/et_sms"
+                    style="@style/black_15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/btn_sms"
+                    android:background="@drawable/input_login"
+                    android:hint="短信校验码"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="5dip" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/ib_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/remeberpwd_n" />
+
+                <TextView
+                    style="@style/black_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="同意 《优乐通服务协议》" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_protocol"
+                style="@style/gree_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/clear"
+                android:text="服务协议"
+                android:textColor="@drawable/text_green_blue" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_regist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/button_bg"
+            android:text="立即注册"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+</ScrollView>

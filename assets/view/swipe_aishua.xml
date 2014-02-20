@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <body
+        pageBack="close"
+        pageId="swipe"
+        pageName="我要收款"
+        templateId="NULL" >
+
+        <layout
+            id="topBar"
+            templateId="relativeLayout04" >
+
+            <input
+                id="backButton"
+                actionId="backButton"
+                actionType="close"
+                layoutParamsTemplateIds="relativeLayoutParams01"
+                margin="10,9,0,4"
+                padding="2,0,2,0"
+                templateId="button05"
+                type="button" >
+            </input>
+
+            <label
+                id="topLabel"
+                layoutParamsTemplateIds="relativeLayoutParams06,relativeLayoutParams07"
+                templateId="label05"
+                value="请消费者刷卡" >
+            </label>
+        </layout>
+
+        <topInfoView
+            id="topInfoView"
+            layoutParamsTemplateIds="linearLayoutParams01"
+            templateId="linearLayout01" />
+
+        <layout
+            id="innerLayout"
+            layoutParamsTemplateIds="linearLayoutParams04"
+            templateId="linearLayout03" >
+
+            <image
+                id="swipecardimage"
+                src="swipecardimage"
+                templateId="image01" />
+
+            <label
+                id="confirmLabel"
+                layoutParamsTemplateIds="linearLayoutParams01"
+                margin="0,20,0,0"
+                templateId="label18"
+                value="请按【刷卡】按钮开始交易" />
+        </layout>
+
+        <input
+            id="balancequery_1ConfirmBtn"
+            action="inputmoney"
+            actionId="inputmoney"
+            actionType="local"
+            fsk="swipeCard|null"
+            layoutParamsTemplateIds="linearLayoutParams01"
+            margin="10,20,10,10"
+            templateId="button06"
+            type="button"
+            value="刷     卡" />
+    </body>
+
+</root>

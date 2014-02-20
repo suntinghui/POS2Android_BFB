@@ -1,0 +1,58 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!---付款请求报文 -->
+
+<root>
+	<field key="fieldTrancode" value="200001111"  />
+	<field key="field2" value=""  />
+	<field key="field3" value="400000"  />
+	<field key="field4" value="__field4"  />
+	<field key="field7" value="__yyyyMMdd" />
+	<field key="field11" value="__TRACEAUDITNUM"  />
+	<field key="field12" value="__hhmmss"  />
+	<field key="field13" value="__MMdd"  />
+	<field key="field14" value=""/>
+	<field key="field22" value="021" /><!-- 多种取值，参见规范 11.3.10.3 -->
+	<field key="field23" value="000" />
+	<field key="field25" value="00"  />
+	<field key="field26" value="06" /><!-- 密码长度，有无此数据项受22域决定 -->
+	<field key="field32" value="" />
+	<field key="field33" value="" />
+	<field key="field35" value="__FIELD35" />
+	<!-- <field key="field36" value="__FIELD36" /> -->
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="field43" value="" />
+	<field key="field46" value="" />
+	<field key="field47" value="" />
+	<field key="field49" value="156" />
+	<field key="field52" value="__PSAMPIN" />
+	<field key="field55" value="" /> <!-- IC卡55数据域 -->
+	<field key="field60" value="22#__BATCHNUM#00020" />
+	<field key="field62" value="" />
+	<field key="field102" value="" /> <!-- 转出账号 -->
+	<field key="field103" value="__field103" />  <!-- 转入账号 -->
+	<field key="fieldPayee" value="__fieldPayee" />  <!-- 收款人姓名 -->
+	<field key="fieldIssuerCode" value="__fieldIssuerCode" />  <!-- 开户银行行号 -->
+	<field key="termMobile" value="__PHONENUM"  />   
+	<field key="ReaderID" value="__TERSERIALNO" />  
+	<field key="PSAMID" value="__PSAMNO" />  
+	<field key="fieldAddress" value="__ADDRESS" />
+	<field key="filedRemark" value="__filedRemark" />
+	<field key="fieldReference" value="__fieldReference" />
+	<field key="fieldChannel" value="06" />
+	
+	<!-- xxm ;    
+	文档中有，程序中没有f32,f33,f43,f46,f47, fieldMerchID,fieldReference,fieldMAB,field64,filedRemark
+	->
+	
+	<!-- 孙廷会
+	
+	原程序中没有 f32,f33,f43,f46,f47，在2012-12-14日核对接口时服务器端要求加入，要求全部附空值.
+	
+	新增filedRemark和fieldReference, 服务器端也不确定用哪个代表附言 ！！！
+	
+	 -->
+	
+</root>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/list_item_bg"
+    android:paddingTop="10dip" android:paddingBottom="10dip" android:paddingLeft="10dip" android:paddingRight="10dip" android:stretchColumns="1">
+    
+    <TableRow >
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="交易时间："
+            android:textColor="@color/black" android:textSize="16sp" android:gravity="right"/>
+        
+        <TextView  android:id="@+id/revokeDateTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" 
+           android:textStyle="bold" android:textColor="@color/black" android:textSize="16sp" android:gravity="right"/>
+    </TableRow>
+    
+    <TableRow android:layout_marginTop="5dip" >
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="交易账号："
+            android:textColor="@color/black" android:textSize="16sp" android:gravity="right"/>
+        
+        <TextView  android:id="@+id/revokeAccountNo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" 
+           android:textStyle="bold" android:textColor="@color/black" android:textSize="16sp" android:gravity="right"/>
+    </TableRow>
+    
+    <TableRow android:layout_marginTop="5dip" >
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="交易金额："
+            android:textColor="@color/black" android:textSize="16sp" android:gravity="left"/>
+        
+        <TextView  android:id="@+id/revokeAmount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" 
+           android:textStyle="bold" android:textColor="@color/black" android:textSize="16sp" android:gravity="right"/>
+    </TableRow>
+    
+</TableLayout>

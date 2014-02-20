@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 正常状态 -->
+    <item android:id="@+id/editMenu"
+        android:title="编辑"
+        android:icon="@android:drawable/ic_menu_edit" />
+    
+    <item android:id="@+id/addMenu"
+        android:title="添加"
+        android:icon="@android:drawable/ic_menu_add" />
+    
+    
+    <!-- 编辑状态 -->
+    <item android:id="@+id/cancelEditMenu"
+        android:title="取消编辑"
+        android:icon="@android:drawable/ic_menu_edit" />
+    
+    <item android:id="@+id/deleteMenu"
+        android:title="删除"
+        android:icon="@android:drawable/ic_menu_delete" />
+    
+    <item android:id="@+id/selectAllMenu"
+        android:title="全选"
+        android:icon="@android:drawable/ic_menu_mylocation" />
+    
+    <item android:id="@+id/cancelSelectAllMenu"
+        android:title="取消全选"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel" />
+    
+</menu>

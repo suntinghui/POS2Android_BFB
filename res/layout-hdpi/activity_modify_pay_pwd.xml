@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dhc="http://schemas.android.com/apk/res/com.bfb.pos"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/back_button" >
+            </Button>
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="修改支付密码"
+                android:textColor="@color/white"
+                android:textSize="18dip" />
+        </RelativeLayout>
+
+        <com.bfb.pos.activity.view.TopInfoView
+            android:id="@+id/topInfoView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!-- end -->
+
+            <com.bfb.pos.activity.view.PasswordWithIconView
+                android:id="@+id/et_pwd_old"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:paddingTop="8dip" />
+
+            <com.bfb.pos.activity.view.PasswordWithIconView
+                android:id="@+id/et_pwd_new"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:paddingTop="8dip" />
+
+            <com.bfb.pos.activity.view.PasswordWithIconView
+                android:id="@+id/et_pwd_confirm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:paddingTop="8dip" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dip" >
+
+                <Button
+                    android:id="@+id/btn_sms"
+                    style="@style/black_15"
+                    android:background="@drawable/img_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="获取短信校验码" />
+
+                <EditText
+                    android:id="@+id/et_sms"
+                    style="@style/black_15"
+                    android:paddingLeft="5dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/input_login"
+                    android:layout_toLeftOf="@id/btn_sms"
+                    android:inputType="numberDecimal"
+                    android:hint="短信校验码" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/button_bg"
+            android:text="确定"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+</ScrollView>

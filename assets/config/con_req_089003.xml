@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 修改密码 -->
+<root shouldMac = "true" isJson = "true">
+	<field key="fieldTrancode" value="089003" />
+	
+	<field key="tel" value="__tel"  />
+	<field key="old_password" value="__old_password" />
+	<field key="new_password" value="__new_password"/>
+	<field key="smscode" value="__smscode"/>
+	<field key="type" value="__type"/> <!-- 0 登录密码  1 支付密码 -->
+	<field key="macstr" value="tel,smscode"  />
+</root>

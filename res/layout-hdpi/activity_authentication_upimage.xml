@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topbg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="13dip"
+            android:background="@drawable/back_button" >
+        </Button>
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="实名认证"
+            android:textColor="@color/white"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="13dip"
+            android:background="@drawable/blue_btn"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:text="上传" >
+        </Button>
+    </RelativeLayout>
+
+    <com.bfb.pos.activity.view.TopInfoView
+            android:id="@+id/topInfoView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:paddingBottom="10dip"
+            android:layout_marginTop="15dip"
+            android:orientation="vertical" >
+            
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="20dip">
+                
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传头像:"
+                    style="@style/black_15"/>
+                
+                <ImageView android:id="@+id/iv_0" 
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/img_card_head_portrait"/>
+            </RelativeLayout>
+            
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="20dip">
+                
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证正面:"
+                    style="@style/black_15"/>
+                
+                <ImageView android:id="@+id/iv_1" 
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/img_card_head_portrait"/>
+            </RelativeLayout>
+            
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="20dip">
+                
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证反面:"
+                    style="@style/black_15"/>
+                
+                <ImageView android:id="@+id/iv_2" 
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/img_card_head_portrait"/>
+            </RelativeLayout>
+            
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="20dip">
+                
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二合一照片:"
+                    style="@style/black_15"/>
+                
+                <ImageView android:id="@+id/iv_3" 
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/img_card_head_portrait"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

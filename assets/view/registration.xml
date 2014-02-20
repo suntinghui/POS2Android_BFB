@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <body
+        pageBack="close"
+        pageId="registration"
+        pageName="商户注册"
+        templateId="NULL" >
+
+        <layout
+            id="topBar"
+            templateId="relativeLayout04" >
+
+            <input
+                id="backButton"
+                actionId="backButton"
+                actionType="close"
+                layoutParamsTemplateIds="relativeLayoutParams01"
+                margin="10,9,0,4"
+                padding="2,0,2,0"
+                pageBack="close"
+                templateId="button05"
+                type="button" >
+            </input>
+
+            <label
+                id="topLabel"
+                layoutParamsTemplateIds="relativeLayoutParams06,relativeLayoutParams07"
+                templateId="label05"
+                value="商户注册" >
+            </label>
+        </layout>
+
+        <topInfoView
+            id="topInfoView"
+            layoutParamsTemplateIds="linearLayoutParams01"
+            templateId="linearLayout01" />
+
+        <layout
+            id="innerLayout"
+            layoutParamsTemplateIds="linearLayoutParams04"
+            templateId="linearLayout06" >
+
+            <input
+                id="termMobile"
+                allowNull="false"
+                hint="请输入注册的手机号码"
+                inputType="numeric"
+                layoutParamsTemplateIds="linearLayoutParams01"
+                leftLabel="注册手机"
+                margin="20,20,20,0"
+                maxLength="11"
+                pattern="^(1(([35][0-9])|(47)|[8][01236789]))\d{8}$"
+                templateId="text03"
+                type="text"
+                value="__PHONENUM" >
+            </input>
+
+            <input
+                id="CorpRepr"
+                allowNull="false"
+                hint="请输入登记的姓名"
+                layoutParamsTemplateIds="linearLayoutParams01"
+                leftLabel="姓        名"
+                margin="20,20,20,0"
+                templateId="text03"
+                type="text" >
+            </input>
+
+            <input
+                id="CertificatesId"
+                allowNull="false"
+                hint="请输入登记的身份证号码"
+                layoutParamsTemplateIds="linearLayoutParams01"
+                leftLabel="身  份  证"
+                margin="20,20,20,0"
+                maxLength="18"
+                pattern="^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$"
+                templateId="text03"
+                type="text" >
+            </input>
+
+            <input
+                id="field103"
+                allowNull="false"
+                hint="请输入登记的收款帐号"
+                layoutParamsTemplateIds="linearLayoutParams01"
+                leftLabel="收款账号"
+                margin="20,20,20,0"
+                templateId="text03"
+                inputType="numeric"
+                type="text" >
+            </input>
+        </layout>
+
+        <input
+            id="registerConfirmBtn"
+            actionId="register"
+            fsk="Get_PsamNo|null#Get_VendorTerID|null"
+            layoutParamsTemplateIds="linearLayoutParams01"
+            margin="20,20,20,0"
+            templateId="button06"
+            transfer="100001"
+            type="button"
+            value="确     定" >
+
+            <param id="CorpRepr" />
+
+            <param id="CertificatesId" />
+
+            <param id="field103" />
+
+            <param id="termMobile" />
+        </input>
+        
+        <instructionsView id="instructionsView"
+			layoutParamsTemplateIds="linearLayoutParams01" instructionId="registration" 
+			margin="20,20,20,20"/>
+    </body>
+
+</root>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topbg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/back_button" >
+        </Button>
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="请签名"
+            android:textColor="@color/white"
+            android:textSize="18dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/sign_top" >
+
+            <TextView
+                android:id="@+id/amountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:text="交易金额:"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/amountText"
+                android:text="￥ 365.00"
+                android:textColor="#4678ba"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/amountText"
+                 android:text="请核对金额" android:textSize="14sp"/>
+            -->
+
+            <com.bfb.pos.activity.view.TextWithLabelView
+                android:id="@+id/phoneNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dip"
+            android:background="@drawable/sign_bottom"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="提示:签购单将以短信的形式发送到您的手机上，请妥善保存。" android:textColor="@color/gray"
+                android:textSize="14sp" android:layout_marginLeft="5dip"/>
+
+            <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal|center_vertical">
+
+                <Button
+                    android:id="@+id/clearButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sign_clear_btn" />
+
+                <Button
+                    android:id="@+id/okButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dip"
+                    android:layout_toRightOf="@id/clearButton"
+                    android:background="@drawable/sign_ok_btn" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paintLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/bottomLayout"
+            android:layout_below="@id/topLayout"
+            android:background="@drawable/sign_middle"
+            android:gravity="center" 
+            android:orientation="horizontal">
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

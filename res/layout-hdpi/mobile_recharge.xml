@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dhc="http://schemas.android.com/apk/res/com.bfb.pos"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/back_button" >
+            </Button>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="手机充值"
+                android:textColor="@color/white"
+                android:textSize="18dip" />
+        </RelativeLayout>
+
+        <com.bfb.pos.activity.view.TopInfoView
+            android:id="@+id/topInfoView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!-- begin 20121206 xxm update layout_marginTop -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- end -->
+
+                <com.bfb.pos.activity.view.TextWithLabelView
+                    android:id="@+id/phoneNumberText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="8" />
+
+                <Button
+                    android:id="@+id/contactButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/linkman" />
+            </LinearLayout>
+
+            <!-- begin 20121206 xxm update layout_marginTop -->
+
+            <com.bfb.pos.activity.view.TextWithLabelView
+                android:id="@+id/againPhoneNumberText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical" >
+
+                <!-- end -->
+
+                <TextView
+                    android:id="@+id/spinnerText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="4dip"
+                    android:text="请您选择充值金额："
+                    android:textColor="@color/gray" />
+
+                <!-- begin 20121206 xxm   add paddingTop paddingBottom属性 -->
+
+                <Spinner
+                    android:id="@+id/Spinner01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selectbg"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="10dip"
+                    android:paddingTop="10dip" />
+                <!-- end -->
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- begin 20121206 xxm update margin属性 -->
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:layout_marginTop="15dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/button_bg"
+            android:text="确      定"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <!-- end -->
+
+        <com.bfb.pos.activity.view.InstructionsForUseView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="15dip"
+            dhc:instructionId="mobileRecharge" />
+    </LinearLayout>
+
+</ScrollView>

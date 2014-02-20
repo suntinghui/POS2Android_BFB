@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 短信验证码 -->
+<root shouldMac = "true" isJson = "true">
+	<field key="fieldTrancode" value="089006" />
+	
+	<field key="tel" value="__tel"  />
+	<field key="time" value="__time"/>
+	<field key="macstr" value="tel,local_log,merchant_id"/>
+</root>

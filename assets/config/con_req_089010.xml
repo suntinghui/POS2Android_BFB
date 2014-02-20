@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 完善注册信息 -->
+<root shouldMac = "true" isJson = "true">
+	<field key="fieldTrancode" value="089010" />
+	
+	<field key="tel" value="__tel"  />
+	<field key="merchant_name" value="__merchant_name" />
+	<field key="pid" value="__pid"/>
+	<field key="email" value="__email"/>
+	<field key="paypass" value="__paypass"/>
+	<field key="macstr" value="tel,pid,paypass"/>
+</root>

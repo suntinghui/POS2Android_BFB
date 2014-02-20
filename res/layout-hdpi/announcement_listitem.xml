@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="5dip"
+    android:paddingTop="5dip" >
+
+    <TextView
+        android:id="@+id/annTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="系统升级公告"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/annContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingTop="5dip"
+        android:text="系统升级公告系统升级公告系统升级公告系统升级公告系统升级公告告系统升级公告系统升级公告系统升级公告系统升级公告"
+        android:textColor="#a5a5a5"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/annDate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingTop="5dip"
+        android:text="2012-07-19 12:24:43"
+        android:textColor="#a5a5a5"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+</LinearLayout>

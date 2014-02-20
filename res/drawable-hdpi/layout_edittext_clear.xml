@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_login_edittext_backdrop" >
+
+    <ImageView
+        android:id="@+id/leftImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/img_edittext_pwd" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/leftImage"
+        android:background="@null"
+        android:hint="@string/app_name"
+        android:paddingLeft="10dip"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/clearImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/img_login_edittext_delete" />
+
+</RelativeLayout>

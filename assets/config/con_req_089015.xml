@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 找回密码 登录密码 getPassword-->
+<root isJson = "true">
+	<field key="fieldTrancode" value="089015" />
+	
+	<field key="tel" value="__tel"  />
+	<field key="smscode" value="__smscode" />
+	<field key="logpass" value="__logpass" />
+	<field key="type" value="__type" />
+</root>

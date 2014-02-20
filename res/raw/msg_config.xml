@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<j8583cn-config>
+	<header tpduLength="10" headerLength="12">0100</header>
+	<header tpduLength="10" headerLength="12">0110</header>
+	 
+	<!-- -->
+	<header tpduLength="10" headerLength="12">0200</header>
+	<header tpduLength="10" headerLength="12">0210</header>
+	<!-- -->
+	
+	<!-- -->
+	<header tpduLength="10" headerLength="12">0220</header>
+	<header tpduLength="10" headerLength="12">0230</header>
+	
+	<!-- -->
+	<header tpduLength="10" headerLength="12">0320</header>
+	<header tpduLength="10" headerLength="12">0330</header>
+	
+	<!-- -->
+	<header tpduLength="10" headerLength="12">0400</header>
+	<header tpduLength="10" headerLength="12">0410</header>
+	
+	<!-- -->
+	<header tpduLength="10" headerLength="12">0500</header>
+	<header tpduLength="10" headerLength="12">0510</header>
+	
+	<!-- -->
+	<header tpduLength="10" headerLength="12">0800</header>
+	<header tpduLength="10" headerLength="12">0810</header>
+
+	<!-- -->
+	<header tpduLength="10" headerLength="12">0820</header>
+	<header tpduLength="10" headerLength="12">0830</header>
+	
+	
+		<!-- -->
+	<header tpduLength="10" headerLength="12">0860</header>
+	<header tpduLength="10" headerLength="12">0870</header> 
+	
+ 
+	<!-- <template msgtypeid="0800">
+		<field id="41" datatype="ALPHA" length="8">00021678</field>
+		<field id="42" datatype="ALPHA" length="15">105360170110159</field>
+		<field id="49" datatype="ALPHA" length="3">159</field>
+		<field id="60" datatype="LLLNVAR">01100000002001</field>
+	</template> -->
+
+	<!-- <template msgtypeid="0200">
+		<field id="3" datatype="NUMERIC" length="6">650000</field>
+		<field id="32" datatype="LLVAR">456</field>
+		<field id="35" datatype="LLVAR">4591700012340000=</field>
+		<field id="49" datatype="ALPHA" length="3">484</field>
+		<field id="60" datatype="LLLVAR">B456PRO1+000</field>
+	</template> -->
+
+
+<!-- 	<template msgtypeid="0210">
+		<field id="60" datatype="LLLVAR">Fixed data from template</field>
+	</template>
+	 -->
+	
+	<allMsgInfo>
+		<field id="2" datatype="LLVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="NUMERIC" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="26" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLVAR" />
+		<field id="35" datatype="LLVAR" />
+		<field id="36" datatype="LLVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="LLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="52" datatype="LLLVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="60" datatype="LLLVAR" />
+		<field id="61" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+		<field id="64" datatype="LLLVAR" />
+	</allMsgInfo>
+	
+	<parseinfo msgtypeid="0100">
+		<field id="2" datatype="LLVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="NUMERIC" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="26" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLVAR" />
+		<field id="35" datatype="LLVAR" />
+		<field id="36" datatype="LLVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="LLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="52" datatype="LLLVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="60" datatype="LLLVAR" />
+		<field id="61" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+		<field id="64" datatype="LLLVAR" />
+	</parseinfo>
+	<parseinfo msgtypeid="0110">
+		<field id="2" datatype="LLVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="NUMERIC" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="26" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLVAR" />
+		<field id="35" datatype="LLVAR" />
+		<field id="36" datatype="LLVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="LLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="52" datatype="LLLVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="60" datatype="LLLVAR" />
+		<field id="61" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+		<field id="64" datatype="LLLVAR" />
+	</parseinfo>
+	
+	<!--  自定义 登录交易-->
+	<parseinfo msgtypeid="0860">
+		<field id="11" datatype="NUMERIC" length="6"  isOk="true"/>
+		<field id="60" datatype="LLLNVAR" isOk="true"/> 
+		<field id="63" datatype="LLLVAR"/> 
+	</parseinfo>
+	
+	<parseinfo msgtypeid="0870">
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="43" datatype="ALPHA" length="40" />
+		<field id="60" datatype="LLLNVAR" /> 
+		<!-- 当39域为“00”时必选，为24字节的PIK和MAK -->
+		<field id="62" datatype="LLLVAR" />
+	</parseinfo>
+
+	<parseinfo msgtypeid="0800">
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="AMOUNT" length="12" />
+		<field id="11" datatype="NUMERIC" length="6"  isOk="true"/>
+		<field id="13" datatype="DATE4" isOk="false"/>
+		<field id="14" datatype="DATE_EXP" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="26" datatype="NUMERIC" length="2" />
+		<field id="41" datatype="ALPHA" length="8" isOk="true"/>
+		<field id="42" datatype="ALPHA" length="15" isOk="true"/>
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="52" datatype="LLNVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<!-- <field id="60" datatype="LLLVAR" /> -->
+		<field id="60" datatype="LLLNVAR" isOk="true"/> 
+		<field id="63" datatype="LLLVAR"/>  
+		<field id="64" datatype="ALPHA" length="8"/> 
+	</parseinfo>
+	 
+	<parseinfo msgtypeid="0810">
+	    <field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="AMOUNT" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" /> 
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="43" datatype="ALPHA" length="40" />
+		<field id="44" datatype="LLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="54" datatype="LLLVAR" />
+		<field id="60" datatype="LLLNVAR" /> 
+		<field id="61" datatype="LLLVAR" /> 
+		<!-- 当39域为“00”时必选，为24字节的PIK和MAK -->
+		<field id="62" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+		<field id="64" datatype="ALPHA" length="8"/>
+	</parseinfo>
+	
+	
+	<parseinfo msgtypeid="0200">
+		<field id="2" datatype="LLNVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="AMOUNT" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" /> 
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="26" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="35" datatype="LLNVAR" />
+		<field id="36" datatype="LLLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="41" datatype="ALPHA" length="8" isOk="true"/>
+		<field id="42" datatype="ALPHA" length="15" isOk="true"/>
+		<field id="44" datatype="LLVAR" />
+		<field id="48" datatype="LLLNVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="52" datatype="LLNVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="54" datatype="LLLVAR" />
+		<field id="55" datatype="LLLVAR" />
+		<field id="57" datatype="LLVAR" />
+		<field id="58" datatype="LLLVAR" /> 
+		<field id="60" datatype="LLLNVAR" />
+		<field id="61" datatype="LLLNVAR" />
+		<field id="62" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+		<field id="64" datatype="ALPHA" length="8"/>
+	</parseinfo>
+	<parseinfo msgtypeid="0210">
+		<field id="2" datatype="LLNVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="AMOUNT" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" /> 
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="26" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="35" datatype="LLNVAR" />
+		<field id="36" datatype="LLLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="LLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<!-- 无长度 -->
+		<field id="52" datatype="LLNVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="54" datatype="LLLVAR" />
+		<field id="55" datatype="LLLVAR" /> 
+		<field id="60" datatype="LLLNVAR" />
+		<field id="62" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+		<field id="64" datatype="ALPHA" length="8"/>
+	</parseinfo>
+
+	<parseinfo msgtypeid="0220">
+		<field id="2" datatype="LLVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="NUMERIC" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="26" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLVAR" />
+		<field id="35" datatype="LLVAR" />
+		<field id="36" datatype="LLVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="LLVAR" />
+		<field id="44" datatype="LLVAR" />
+		<field id="48" datatype="LLLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="52" datatype="LLLVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="60" datatype="LLLVAR" />
+		<field id="61" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+		<field id="64" datatype="LLLVAR" />
+	</parseinfo>
+	<parseinfo msgtypeid="0230">
+		<field id="2" datatype="LLVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="NUMERIC" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="26" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLVAR" />
+		<field id="35" datatype="LLVAR" />
+		<field id="36" datatype="LLVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="LLVAR" />
+		<field id="44" datatype="LLVAR" />
+		<field id="48" datatype="LLLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="52" datatype="LLLVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="60" datatype="LLLVAR" />
+		<field id="61" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+		<field id="64" datatype="LLLVAR" />
+	</parseinfo>
+
+	<parseinfo msgtypeid="0320">
+		<field id="2" datatype="LLVAR" />
+		<field id="2" datatype="LLVAR" />
+		<field id="4" datatype="NUMERIC" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="48" datatype="LLLNVAR" />
+		<field id="55" datatype="LLLVAR" />
+		<field id="60" datatype="LLLNVAR" />
+		<field id="62" datatype="LLLVAR" />
+	</parseinfo>
+	<parseinfo msgtypeid="0330">
+		<field id="2" datatype="LLVAR" />
+		<field id="2" datatype="LLVAR" />
+		<field id="4" datatype="NUMERIC" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="48" datatype="LLLNVAR" />
+		<field id="55" datatype="LLLVAR" />
+		<field id="60" datatype="LLLNVAR" />
+		<field id="62" datatype="LLLVAR" />
+	</parseinfo>
+
+	<parseinfo msgtypeid="0400">
+		<field id="2" datatype="LLNVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="AMOUNT" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4"/>
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="LLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<!-- 无长度 -->
+		<field id="52" datatype="LLNVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="54" datatype="LLLVAR" />
+		<field id="55" datatype="LLLVAR" />
+		<field id="58" datatype="LLLVAR" />
+		<field id="60" datatype="LLLNVAR" />
+		<field id="62" datatype="LLLVAR" />
+		<field id="64" datatype="ALPHA" length="8" />
+	</parseinfo>
+	<parseinfo msgtypeid="0410">
+		<field id="2" datatype="LLNVAR" />
+		<field id="3" datatype="NUMERIC" length="6" />
+		<field id="4" datatype="NUMERIC" length="12" />
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="14" datatype="DATE_EXP" />
+		<field id="15" datatype="DATE4" />
+		<field id="22" datatype="NUMERIC" length="3" />
+		<field id="23" datatype="NUMERIC" length="3" />
+		<field id="25" datatype="NUMERIC" length="2" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="38" datatype="ALPHA" length="6" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="LLVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<!-- 无长度 -->
+		<field id="52" datatype="LLNVAR" />
+		<field id="53" datatype="NUMERIC" length="16" />
+		<field id="54" datatype="LLLVAR" />
+		<field id="55" datatype="LLLVAR" />
+		<field id="58" datatype="LLLVAR" />
+		<field id="60" datatype="LLLNVAR" />
+		<field id="62" datatype="LLLVAR" />
+		<field id="64" datatype="ALPHA" length="8"/>
+	</parseinfo>
+
+	<parseinfo msgtypeid="0500">
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="15" datatype="DATE4" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="48" datatype="LLLNVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="60" datatype="LLLNVAR" />
+		<field id="63" datatype="LLLVAR" />
+	</parseinfo>
+	<parseinfo msgtypeid="0510">
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="15" datatype="DATE4" />
+		<field id="32" datatype="LLNVAR" /> 
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="48" datatype="LLLNVAR" />
+		<field id="49" datatype="ALPHA" length="3" />
+		<field id="60" datatype="LLLNVAR" />
+		<field id="63" datatype="LLLVAR" />
+	</parseinfo>
+	
+	<parseinfo msgtypeid="0820">
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="44" datatype="NUMERIC" length="20" />
+		<field id="60" datatype="LLLNVAR" />
+		<field id="62" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+	</parseinfo>
+
+	<parseinfo msgtypeid="0830">
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="43" datatype="ALPHA" length="40" />
+		<field id="60" datatype="LLLNVAR" />
+		<field id="61" datatype="LLLVAR" />
+		<field id="62" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+	</parseinfo> 
+
+	<!-- The client example uses this to read the responses -->
+
+</j8583cn-config>
+
+	

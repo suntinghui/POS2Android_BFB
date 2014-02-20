@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dhc="http://schemas.android.com/apk/res/com.bfb.pos"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/back_button" >
+            </Button>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="交易明细查询"
+                android:textColor="@color/white"
+                android:textSize="18dip" />
+        </RelativeLayout>
+
+        <com.bfb.pos.activity.view.TopInfoView
+            android:id="@+id/topInfoView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <!-- 20121206 xxm update layout_marginTop -->
+
+        <LinearLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.bfb.pos.activity.view.PickerDateView
+                android:id="@+id/pickerDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.bfb.pos.activity.view.PasswordWithLabelView
+                android:id="@+id/passwordText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dip"
+                android:paddingTop="8dip" />
+        </LinearLayout>
+
+        <!-- begin 20121206 xxm  update margin 属性 -->
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"          
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/button_bg"
+            android:text="查     询"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+
+        <com.bfb.pos.activity.view.InstructionsForUseView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="15dip"
+            dhc:instructionId="queryTransHistory" />
+
+        <!-- end -->
+    </LinearLayout>
+
+</ScrollView>

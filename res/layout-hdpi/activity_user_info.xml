@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+            android:id="@+id/topbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="13dip"
+                android:background="@drawable/back_button" >
+            </Button>
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="用户信息"
+                android:textColor="@color/white"
+                android:textSize="18dip" />
+        </RelativeLayout>
+
+		<LinearLayout android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="15dip"
+		    android:layout_marginLeft="15dip"
+		    android:layout_marginRight="15dip"
+		    android:orientation="vertical">
+		    
+		    <RelativeLayout android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:background="@drawable/button_bg">
+		        
+		        <TextView android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="真实姓名"
+		            style="@style/black_15"
+		            android:background="@color/clear"
+		            />
+		        
+		        <TextView android:id="@+id/tv_name" 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="真实姓名"
+		            style="@style/black_15"
+		            android:layout_alignParentRight="true"
+		            android:background="@color/clear"
+		            />
+		    </RelativeLayout>
+		    
+		    <RelativeLayout android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:layout_marginTop="3dip"
+		        android:background="@drawable/button_bg">
+		        
+		        <TextView android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="身份证"
+		            style="@style/black_15"
+		            android:background="@color/clear"
+		            />
+		        
+		        <TextView android:id="@+id/tv_identity_cardNo" 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="430181***99191"
+		            style="@style/black_15"
+		            android:layout_alignParentRight="true"
+		            android:background="@color/clear"
+		            />
+		    </RelativeLayout>
+		    
+		    <RelativeLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:layout_marginTop="20dip"
+		        android:background="@drawable/button_bg">
+		        
+		        <Button android:id="@+id/btn_confirm" 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@color/clear"
+		            android:text="未实名认证"
+		            style="@style/black_15"/>
+		        <ImageView android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/image_arrow_right"
+		            android:layout_alignParentRight="true"/>
+		    </RelativeLayout>
+		</LinearLayout>
+</LinearLayout>

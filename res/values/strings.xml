@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">优乐通</string>
+    
+    <string name="changeone"><u>换一张</u></string>
+    
+    <string name="selectAccount">请选择收款人</string>
+    <string name="selectUse">请选择用途</string>
+    <string name="selectBank">请选择开户行</string>
+    <string name="selectQueryType">请选择查询类型</string>
+    <string name="sysTimeTip">您的手机时间可能不准确，为了不影响交易，建议您立即校正手机时间。</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="hint_username">请输入用户名</string>
+    <string name="hint_pwd">请输入密码</string>
+    <string name="remember_pwd">记住密码</string>
+    <string name="get_pwd">取回密码</string>
+    <string name="forgetPwd"><u>忘记密码</u></string>
+    <string name="accountInNo">收款人账号</string>
+    <string name="pInputAccountInNo">请输入收款人账号</string>
+    <string name="inputAgain">再&#160;&#160;次&#160;输&#160;&#160;入</string>
+    <string name="pInputAccountInNoAgain">请再次输入收款人账号</string>
+    <string name="accountInName">收款人姓名</string>
+    <string name="pInputAccountInName">请输入收款人姓名</string>
+    <string name="phoneNo">手&#160;&#160;&#160;&#160;&#160;机&#160;&#160;&#160;&#160;&#160;号</string>
+    <string name="phoneNo2">手机号</string>
+    <string name="securityCode">验证码</string>
+    <string name="inputSecurityCode">请输入验证码</string>
+    <string name="pInputPhoneNoIn">请输入收款人手机号</string>
+    <string name="pInputPhoneNoOut">请输入付款人手机号</string>
+    <string name="pInputPhoneNo">请输入登记的手机号码</string>
+    <string name="existAccount">已存在该账号信息，请核对</string>
+    <string name="addAccountSuccess">收款人添加成功</string>
+    <string name="addAccountFailure">收款人添加失败</string>
+    <string name="accountInNoNull">收款账号不能为空</string>
+    <string name="accountNoIllegal">银行账号不能少于16位</string>
+    <string name="accountInNoAgainNull">确认收款账号不能为空</string>
+    <string name="accountNoNotEqual">两次收款账号输入不一致</string>
+    <string name="nameNull">姓名不能为空</string>
+    <string name="phoneNoNull">手机号码不能为空</string>
+    <string name="phoneNoIllegal">手机号码格式不正确</string>
+    <string name="nameIllegal">姓名输入非法字符</string>
+    <string name="announcementList">公告列表</string>
+    <string name="receiptList">签购单列表</string>
+    <string name="reversalList">冲正列表</string>
+    <string name="transList">交易列表</string>
+    <string name="historyGroup">交易明细汇总</string>
+    <string name="historyList">交易明细列表</string>
+    <string name="remark">附&#160;&#160;&#160;&#160;&#160;言</string>
+    <string name="pInputRemark">请输入附言(选填)</string>
+    <string name="amount">金&#160;&#160;&#160;&#160;&#160;额</string>
+    <string name="upperAmount">金额大写: </string>
+    <string name="pInputAmount">请输入转账金额</string>
+    <string name="name">姓&#160;&#160;&#160;&#160;名：</string>
+    <string name="bank">开户行：</string>
+    <string name="noContact">联系人列表为空，请先添加联系人</string>
+    <string name="queryingAccountIn">正在查询收款人信息</string>
+    <string name="pWaitAMonment">正在处理请稍候</string>
+    <string name="queryingContact">正在获取联系人列表</string>
+    
+    <!--begin 20121206  xxm 增加&#160;-->
+    <string name="name2">姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名</string>  
+    <string name="IDCard">身&#160;&#160;份&#160;&#160;证</string>
+    <string name="secCode">验&#160;&#160;证&#160;&#160;码</string>
+    <!-- end -->
+    <string name="pInputIDCard">身份证号码不能为空</string>
+    <string name="IDCardIllegal">身份证号码不合法，请检查</string>
+    
+    <!-- beigin 20121206  xxm pwd删掉一个 &#160;-->
+    <string name="pwd">密&#160;&#160;&#160;&#160;码</string>
+    <!-- end -->
+    
+    <string name="pwd2">商户密码</string>
+    <string name="oldPwd">原&#160;&#160;&#160;密&#160;&#160;码</string>
+    
+    <!-- begin 20121206  xxm 删掉一个 &#160;-->
+    <string name="newPwd">新&#160;&#160;密&#160;&#160;码</string>
+    <!-- end -->
+    
+    <string name="confirmPwdAgain">确认密码</string>
+    <string name="pInputNewPwd">请输入6位商户密码</string>
+    <string name="pInputSecuriteCode">请输入验证码</string>
+    <string name="pInputNewPwdAgain">请再次输入6位商户密码</string>
+    <string name="pwdNotEqual">两次密码输入不一致</string>
+    <string name="securityNo">验&#160;&#160;&#160;证&#160;&#160;码</string>
+    <string name="pInputsecurityNo">请输入验证码</string>
+    <string name="timeoutExit">由于您长时间没有操作优乐通，系统超时退出。请您重新登陆。</string>
+    <string name="initSystem">正在进行初始化</string>
+    <string name="rechargePhoneNo">手机号码</string>
+    <string name="rechargePhoneNoAgain">确认号码</string>
+    <string name="pInputRechargePhoneNo">请输充值号码</string>
+    <string name="pInputRechargePhoneNoAgain">请再次输入充值号码</string>
+    <string name="queryingData">正在查询数据</string>
+    <string name="refreshingData">正在刷新数据</string>
+    <string name="noRevokeData">没有需要撤销的收款</string>
+    <string name="operatingDevice">正在操作设备请稍候</string>
+    <string name="showBalanceInDevice">余额已显示在设备屏幕上</string>
+    <string name="noNetTips">请您确认已开通手机上网功能，并在手机上设置正确的上网方式</string>
+    <string name="sendSMS">发&#160;&#160;送&#160;&#160;短&#160;&#160;信</string>
+    <string name="done">完&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;成</string>
+    <string name="downloadingNewAPK">正在下载更新文件</string>
+    <string name="canUpdate">发现新版本，请点击下载。</string>
+    <string name="noSDCard">没有检测到SD卡，无法继续下载。</string>
+    <string name="downloadAPK">下载更新</string>
+    <string name="startDownload">开始下载更新</string>
+    <string name="downloadDone">已下载完成，请点击安装</string>
+    <string name="noPublicKey">没有公钥数据，请确认您已经注册或联系客服!</string>
+    <string name="pwdKeyboardTips">优乐通为保护您的密码安全，请您使用定制的键盘输入密码。密码键盘每次随机打乱按键顺序，并且在您输入完6位密码后自动对密码进行加密，全面保护您的账户安全。</string>
+    
+    <string name="reversalPWD">40051656598</string>
+    <string name="confirm2">确认</string>
+    <string name="planet_prompt">请选择</string> 
+    <string name="choose_terminal_prompt">请选择终端</string>
+    <string name="title_progressbar">正在下载文件</string>
+</resources>

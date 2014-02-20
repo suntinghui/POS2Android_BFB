@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bfb.pos" android:versionCode="1" android:versionName="1.0" >
+    
+    <uses-sdk android:targetSdkVersion="8" android:minSdkVersion="8" />
+    
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 防止手机休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <!-- 手机访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- 以下是使用wifi访问网络所需要的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <!-- 允许程序发送SMS短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 读取手机信息--> 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <!-- 关闭整个应用程序，对２.１之前的有效 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 开机自动启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+   <supports-screens android:anyDensity="true" android:largeScreens="true"
+       android:normalScreens="true" android:smallScreens="true" >
+   </supports-screens>
+   
+   <uses-feature android:name="android.hardware.usb.host"/>
+   
+    <application android:name=".POS2AndroidApplication"
+        android:icon="@drawable/logo" android:label="@string/app_name" >
+        
+        <!-- 开机关机广播 -->
+        <receiver android:name=".activity.BootBroadcastReceiver" >
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- 消息推送服务 -->
+        <service android:enabled="true"
+			android:name="org.androidpn.client.NotificationService"
+			android:label="NotificationService">
+			<intent-filter>
+				<action android:name="org.androidpn.client.NotificationService" />
+			</intent-filter>
+		</service>
+		
+        <!-- 展示推送服务 -->
+        <activity android:name="org.androidpn.client.NotificationDetailsActivity"
+			android:label="@string/app_name">
+		</activity>
+            
+         <service android:name=".fsk.FSKService" android:enabled="true" android:exported="false" >
+             <intent-filter>
+                 <action android:name="com.bfb.pos.fskService" />
+             </intent-filter>
+         </service>
+         
+         <service android:name=".fsk.AiShuaService" android:enabled="true" android:exported="false" >
+             <intent-filter>
+                 <action android:name="com.print.aishuaService" />
+             </intent-filter>
+         </service>
+         
+         <!-- 超时退出服务 -->
+         <service android:name=".activity.TimeoutService" android:enabled="true" android:exported="true" >
+             <intent-filter>
+                 <action android:name="com.bfb.pos.timeoutService" />
+             </intent-filter>
+         </service>
+         
+         <service android:name=".activity.UpdateAPKService" android:enabled="true" android:exported="false">
+             <intent-filter>
+                 <action android:name="com.bfb.pos.updateAPKService" />
+             </intent-filter>
+         </service>
+         
+        <service android:name=".activity.UploadSignImageService" android:enabled="true" android:exported="false">
+             <intent-filter>
+                 <action android:name="com.bfb.pos.uploadSignImageService" />
+             </intent-filter>
+         </service>
+
+        <activity
+            android:name=".activity.SplashActivity" android:theme="@android:style/Theme.Translucent" 
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+    	<activity android:name=".activity.DynamicActivity" android:theme="@style/Theme"
+    	    android:exported="false"
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:launchMode="singleTop">  
+              <intent-filter >
+                <action android:name="com.bfb.pos.dynamic" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+               
+        <activity android:name=".activity.LRCatalogActivity"  android:exported="false" 
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.lrcatalog" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ContactsActivity"   android:theme="@style/Theme" 
+            android:exported="false"
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.contactsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>  
+        </activity>
+        
+        <activity android:name=".activity.LoginActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            android:launchMode="singleTop">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.login" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ShowBalanceActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.showBalance" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.SettlementSuccessActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.settlementSuccessActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.TransferSuccessWithSendSmsActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.transferSuccessSendSms" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.FindPasswordActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan" android:launchMode="singleTop">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.findpassword" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            
+        </activity>
+       
+       <activity android:name=".activity.QueryReversalListActivity"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       	<intent-filter >
+               <action android:name="com.bfb.pos.queryReversalList" />
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+      </activity>
+      
+       <activity android:name=".activity.QueryReceiptListActivity"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       	<intent-filter >
+               <action android:name="com.bfb.pos.queryReceiptList" />
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.QueryReceiptDetailActivity"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.queryReceiptDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.QueryTransferHistoryActivity"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.queryTransferHistoryActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.QueryTransferHistoryGroupActivity"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.queryTransferHistoryGroupActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.QueryTransferHistoryListActivity" android:launchMode="singleTop"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       	<intent-filter >
+               <action android:name="com.bfb.pos.queryTransferHistoryList" />
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.QueryTransferHistoryDetailActivity"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.queryTransferHistoryDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.AnnouncementListActivity"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+          android:launchMode="singleTask">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.announcementListActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.AnnouncementDetailActivity"  android:exported="false" android:theme="@style/Theme" 
+          android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.AnnouncementDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+       
+      <activity android:name=".activity.RevokeTransListActivity"  android:exported="false" android:theme="@style/Theme" 
+           android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.revokeTransListActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+       </activity>
+       
+      <activity android:name=".activity.RevokeTransConfirmActivity"  android:exported="false" android:theme="@style/Theme" 
+           android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.RevokeTransConfirmActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.PayeeAccountListActivity"  android:exported="false" android:theme="@style/Theme" 
+           android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.payeeAccountListActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.AddPayeeAccountActivity"  android:exported="false" android:theme="@style/Theme" 
+           android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.addPayeeAccountActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      
+      <activity android:name=".activity.BankTransferInputActivity"  android:exported="false" android:theme="@style/Theme" 
+           android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.bankTransferInputActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+       
+      <activity android:name=".activity.TrafficStatusActivity"  android:exported="false" android:theme="@style/Theme" 
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+       		<intent-filter >
+                <action android:name="com.bfb.pos.trafficStatusActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>  
+        
+        <activity android:name=".activity.InputMoneyActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.InputMoneyActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            
+        </activity>
+        
+         <activity android:name=".activity.ReceiptActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.receipt" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity android:name=".activity.HandSignActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="landscape" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.handSignActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.MobileChargeActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.mobileChargeActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.FeedbackActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.feedbackActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.AboutActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.aboutActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.RegisterActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.RegisterActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.AuthenticationUpImageActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.AuthenticationUpImageActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.UserInfoActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.UserInfoActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.DrawMoneyActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.DrawMoneyActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.DrawMoneyInfoActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.DrawMoneyInfoActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.DrawMoneyAddAccountActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.DrawMoneyAddAccountActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ModifyLoginPwdActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ModifyLoginPwdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ModifyPayPwdActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ModifyPayPwdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.AuthenticationInfoActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            android:launchMode="singleTask">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.AuthenticationInfoActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.RegisterImproveActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.RegisterImproveActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.FindPwdResultActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.findPwdResultActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.BankSearchActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.BankSearchActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.DrawMoneyModifyAccountActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.DrawMoneyModifyAccountActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ShowProtocolActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ShowProtocolActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.FindPwdModifyActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.FindPwdModifyActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.TransferDetailListActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.TransferDetailListActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.TransferDetailActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.TransferDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.PrintReceiptActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.PrintReceiptActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ChooseTerminalActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ChooseTerminalActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.FindPayPasswordActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.FindPayPasswordActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.DrawMoneyConfirmActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.DrawMoneyConfirmActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SignActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.SignActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ASBalancePwdActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ASBalancePwdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ASBalancePwd2Activity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ASBalancePwd2Activity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ASBalanceSuccessActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ASBalanceSuccessActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ASSwipActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ASSwipActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.FaileActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.FaileActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ShowBalanceAishuaActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.showBalanceAishua" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.ASRevokePwd3Activity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.ASRevokePwd3Activity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".activity.RegisterImproveModifyActivity"  android:exported="false" android:theme="@style/Theme"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        	<intent-filter >
+                <action android:name="com.bfb.pos.RegisterImproveModifyActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

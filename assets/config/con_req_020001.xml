@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 查询余额 -->
+
+<root shouldMac = "true" isJson = "false">
+    
+	<field key="fieldTrancode" value="020001"  />
+	
+	<field key="fieldTransType" value="0200"  />
+	<field key="field2" value=""  />
+	<field key="field3" value="310000"  />
+	<field key="field11" value="__TRACEAUDITNUM"  />
+	<field key="field14" value="" /> <!-- 卡有效期 -->
+	<field key="field22" value="__FIELD22" />
+	<!-- <field key="field23" value="143"></field> -->
+	<field key="field25" value="00"  />
+	<field key="field26" value="12" /><!-- 密码长度，有无此数据项受22域决定 -->
+	<field key="field35" value="__FIELD35" />
+	<!-- <field key="field36" value="" /> -->
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="field49" value="156" />
+	<field key="field52" value="__PSAMPIN" /><!-- 个人PIN，受约束项 -->
+	<field key="field60" value="01#__BATCHNUM#" />
+	<field key="field62" value="__AISHA_PWD" />
+	<field key="field64" value="00000000" />
+	
+</root>

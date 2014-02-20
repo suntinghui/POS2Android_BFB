@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dhc="http://schemas.android.com/apk/res/com.bfb.pos"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="13dip"
+                android:background="@drawable/back_button" >
+            </Button>
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确认撤销"
+                android:textColor="@color/white"
+                android:textSize="18dip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bgLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.bfb.pos.activity.view.TopInfoView
+                android:id="@+id/topInfoView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="10dip"
+                android:text="请仔细核对以下交易信息：" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/receipt_inner_bg"
+                android:shrinkColumns="1"
+                android:stretchColumns="1" >
+
+                <TableRow android:layout_marginTop="5dip" >
+
+                    <TextView
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingLeft="4dip"
+                        android:text="交易流水号:" />
+
+                    <TextView
+                        android:id="@+id/rSerialNo"
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="4dip"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="15dip" >
+
+                    <TextView
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingLeft="4dip"
+                        android:text="批次号:" />
+
+                    <TextView
+                        android:id="@+id/rBatchNum"
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="4dip"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="15dip" >
+
+                    <TextView
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingLeft="4dip"
+                        android:text="检索参考号:" />
+
+                    <TextView
+                        android:id="@+id/rReferIndex"
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="4dip"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="15dip" >
+
+                    <TextView
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingLeft="4dip"
+                        android:text="交易卡号:" />
+
+                    <TextView
+                        android:id="@+id/rAccountNo"
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="4dip"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="15dip" >
+
+                    <TextView
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingLeft="4dip"
+                        android:text="交易金额:" />
+
+                    <TextView
+                        android:id="@+id/rAmount"
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="4dip"
+                        android:text=""
+                        android:textColor="#4678ba"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="15dip" >
+
+                    <TextView
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingLeft="4dip"
+                        android:text="交易时间:" />
+
+                    <TextView
+                        android:id="@+id/rTransTime"
+                        style="@style/TextView16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="4dip"
+                        android:text="" />
+                </TableRow>
+            </TableLayout>
+
+            <com.bfb.pos.activity.view.PasswordWithLabelView
+                android:id="@+id/passwordET"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="15dip" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/button_bg"
+            android:text="确 认 撤 销"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.bfb.pos.activity.view.InstructionsForUseView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="15dip"
+            dhc:instructionId="revokeTrans" />
+    </LinearLayout>
+
+</ScrollView>

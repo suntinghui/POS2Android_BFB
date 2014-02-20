@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topbg" >
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/back_button" >
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="交易明细"
+            android:textColor="@color/white"
+            android:textSize="18dip" />
+    </RelativeLayout>
+
+    <com.bfb.pos.activity.view.TopInfoView
+        android:id="@+id/topInfoView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dip"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+  <!-- 20121206 xxm update margin -->              
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/receipt_inner_bg"
+                    android:stretchColumns="1" >
+<!-- end -->
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="交易类型:" />
+
+                        <TextView
+                            android:id="@+id/qhTransType"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="交易流水号:" />
+
+                        <TextView
+                            android:id="@+id/qhTransferSerial"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="交易时间:" />
+
+                        <TextView
+                            android:id="@+id/qhTransTime"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="交易卡号:" />
+
+                        <TextView
+                            android:id="@+id/qhAccountNo"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" android:visibility="gone">
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="发卡行:" />
+
+                        <TextView
+                            android:id="@+id/qhBank"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="转入卡号:" />
+
+                        <TextView
+                            android:id="@+id/qhaimCardNo"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="交易金额:" />
+
+                        <TextView
+                            android:id="@+id/qhAmount"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text=""
+                            android:textColor="#4678ba"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="批次号:" />
+
+                        <TextView
+                            android:id="@+id/qhBatchNo"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="参考号:" />
+
+                        <TextView
+                            android:id="@+id/qhReferNo"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="8dip" >
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="结算日期:" />
+
+                        <TextView
+                            android:id="@+id/qhSettleDate"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+                    
+                    <TableRow android:layout_marginTop="8dip">
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="结算状态:" />
+
+                        <TextView
+                            android:id="@+id/qhSettleFlag"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+                    
+                    <TableRow android:layout_marginTop="8dip" android:layout_marginBottom="8dip">
+
+                        <TextView
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="5dip"
+                            android:text="交易状态:" />
+
+                        <TextView
+                            android:id="@+id/qhTranFlag"
+                            style="@style/TextView14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="4dip"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+                    
+                </TableLayout>
+            </LinearLayout>
+
+<!-- 20121206 xxm update margin -->
+            <Button
+                android:id="@+id/okButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dip"
+                android:layout_marginLeft="13dip"
+                android:layout_marginRight="13dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/button_bg"
+                android:text="确     定"
+                android:textColor="@color/black"
+                android:textSize="18dip" />
+<!-- end -->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

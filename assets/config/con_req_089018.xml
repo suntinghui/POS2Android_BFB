@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 版本号 getVersion-->
+<root isJson = "true">
+	<field key="fieldTrancode" value="089018" />
+	<field key="type" value="1" />	
+</root>
